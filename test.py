@@ -4,12 +4,12 @@ import cv2
 
 
 def load_model(path):
-    json_file = open(path + 'model100.json', 'r')
+    json_file = open(path + 'model200.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
 
     model = model_from_json(loaded_model_json)
-    model.load_weights(path + "model100.h5")
+    model.load_weights(path + "model200.h5")
     print("Loaded model from disk")
     return model
 
